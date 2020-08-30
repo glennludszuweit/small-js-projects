@@ -22,8 +22,8 @@ main {
   width: 800px;
   background: #f1faee;
   padding: 20px;
-  border-radius: 20px;
-  margin: 20px auto;
+  border-radius: 10px;
+  margin: 50px auto;
 }
 
 .main {
@@ -40,6 +40,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  cursor: pointer;
 }
 
 .choice {
@@ -65,4 +66,20 @@ main {
 
 .choice:last-child {
   background: #bc6c25;
+}
+
+.choice:first-child:hover {
+  background: #264653;
+}
+
+.choice:nth-child(2):hover {
+  background: #723d46;
+}
+
+.choice:nth-child(3):hover {
+  background: #283618;
+}
+
+.choice:last-child:hover {
+  background: #a44a3f;
 }
