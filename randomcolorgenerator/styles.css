@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  margin: 20px auto 10px;
+  text-align: center;
+  font-size: 35px;
+}
+
+form {
+  margin: 20px auto;
+  width: 300px;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+}
+
+.color-box {
+  border-radius: 5px;
+  position: relative;
+  min-height: 300px;
+  min-width: 400px;
+  margin: 10px;
+}
+
+.color-code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  background: rgb(126, 126, 126);
+  color: #eee;
+  border-radius: 5px;
+}
+
+.remove-btn {
+  position: absolute;
+  border-radius: 100%;
+  top: 2px;
+  right: 2px;
+  padding: 0 5px;
+  background: rgb(126, 126, 126);
+  color: #eee;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.remove-btn:hover {
+  color: rgb(126, 126, 126);
+  background: #eee;
+}
+
+.input {
+  height: 30px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(126, 126, 126);
+}
+
+.submit {
+  height: 30px;
+  padding: 0 20px;
+  color: #fff;
+  font-weight: 600;
+  background: green;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: rgb(2, 207, 2);
+}

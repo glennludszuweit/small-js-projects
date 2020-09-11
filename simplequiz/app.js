@@ -119,6 +119,7 @@ let quiz = new Quiz(questions);
 const populate = () => {
   if (quiz.isEnded()) {
     //show scores
+    showScores();
   } else {
     //show question
     let questionDisplay = document.querySelector('.question');
