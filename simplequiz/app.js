@@ -116,7 +116,23 @@ let questions = [
 
 let quiz = new Quiz(questions);
 
-const populate = () => {
+function showScores() {
+  let gameOverMarkup = '<h1>Result</h1>';
+  gameOverMarkup += `<h2 id="score">Your score: ${quiz.score}</h2>`;
+  let mainContainer = document.querySelector('.container main');
+  mainContainer.innerHTML = gameOverMarkup;
+}
+
+function guess(id, guess) {
+  let button = document.getElementById(id);
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    quiz.guess(guess);
+    populate();
+  });
+}
+
+function populate() {
   if (quiz.isEnded()) {
     //show scores
     showScores();
@@ -129,10 +145,9 @@ const populate = () => {
     for (let i = 0; i < choices.length; i++) {
       let choice = document.querySelector('.choice-' + i);
       choice.textContent = choices[i];
+      guess(`btn${i}`, choices[i]);
     }
   }
-};
+}
 
 populate();
-
-const showScores = () => {};
